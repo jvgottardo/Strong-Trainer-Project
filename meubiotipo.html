@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #corpo {
+        background-color: rgb(0, 128, 128);
+
+    }
+
+    .tittle {
+        font-size: 25px;
+        text-decoration: underline black;
+    }
+
+    .enunciado {
+        text-decoration: underline black;
+        font-size: 20px;
+    }
+
+    #button {
+        border-radius: 10px;
+        border: 2px solid black;
+        background-color: rgb(0, 128, 128);
+        height: 20px;
+        width: 50px;
+    }
+
+    #button:hover {
+        background-color: rgb(2, 182, 182);
+        transition-duration: 1s;
+    }
+
+    .link {
+        color: black;
+        font-size: 12px;
+        text-decoration: none;
+    }
+    #botaozada {
+        background-color: black;
+        display: inline;
+        line-height: 20px;
+        border-radius: 10px;
+        font-size: 14px;
+        height: 30px;
+        width: 83px;
+        align-items: center;
+        color: white;
+        border-color: white;
+    }
+
+    #botaozada:hover {
+        background-color: rgb(0, 128, 128);
+        transition-duration: 600ms;
+
+    }
+    @media screen and (max-width: 325px){
+        iframe{
+            width: 310px;
+        }
+
+    }
+</style>
+
+<body id="corpo">
+    <button id="button"> <a class="link" href="biotipo.html">Voltar</a></button>
+    <h1 class="tittle"> Responda as perguntas abaixo e assista ao video para saber qual é o seu biotipo.</h1>
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    <form name="form1" id="form1">
+        <div id="pergunta1">
+            <h2 class="enunciado">Meus ombros são:</h2>
+            <input type="radio" name="questao" value="a" id="a1" checked>Mais largos que meus quadris. <br>
+            <input type="radio" name="questao" value="b" id="b1">Do mesmo tamanho que meus quadris. <br>
+            <input type="radio" name="questao" value="c" id="c1">Mais estreitos que meus quadris.
+        </div>
+    </form>
+    <br>
+    <button id="botaozada" onclick="confirmar()">Confirmar</button>
+    <p id="resultado"></p>
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    <form name="form2" id="form2">
+        <div id="pergunta2">
+            <h2 class="enunciado">Se você envolver seu punho com o dedo do meio e o dedão:</h2>
+            <input type="radio" id="questao" name="questao" value="a" id="a2" checked>Dedo do meio e dedão se tocam na
+            medida. <br>
+            <input type="radio" id="questao" name="questao" value="b" id="b2">Dedo do meio e dedão não se tocam. <br>
+            <input type="radio" id="questao" name="questao" value="c" id="c2"> Dedo do meio fica por cima do dedão e
+            vice-versa.
+        </div>
+    </form>
+    <br>
+    <button id="botaozada" onclick="confirmar2()">Confirmar</button>
+    <p id="resultado2"></p>
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    <form name="form3" id="form3">
+        <div id="pergunta3">
+            <h2 class="enunciado">Meu corpo aparenta:</h2>
+            <input type="radio" id="questao" name="questao" value="a" id="a3" checked>Magro, com pouco volume muscular e
+            baixo acúmulo de gordura. <br>
+            <input type="radio" id="questao" name="questao" value="b" id="b3">Músculos aparentes (mais definidos e com
+            pouco acúmulo de gordura). <br>
+            <input type="radio" id="questao" name="questao" value="c" id="c3">Com formas arredondadas (com acúmulo de
+            gordura).
+        </div>
+    </form>
+    <br>
+    <button id="botaozada" onclick="confirmar3()">Confirmar</button>
+    <p id="resultado3"></p>
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    <br>
+    <br>
+    <iframe width="500" height="300" src="https://www.youtube.com/embed/UTHHEOqJIaU" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <br> <br>
+    <button id="button"> <a class="link" href="biotipo.html">Voltar</a></button>
+
+    <script>
+        let form1;
+        let form2;
+        let form3;
+        function confirmar() {
+            form1 = document.forms['form1'].elements['questao'];
+            if (form1.value == 'a') {
+                document.getElementById('resultado').innerHTML = "ectomorfo";
+            } if (form1.value == 'b') {
+                document.getElementById('resultado').innerHTML = "endomorfo";
+            } if (form1.value == 'c') {
+                document.getElementById('resultado').innerHTML = "mesomorfo";
+            }
+        }
+        function confirmar2() {
+            form2 = document.forms['form2'].elements['questao'];
+            if (form2.value == 'a') {
+                document.getElementById('resultado2').innerHTML = "ectomorfo";
+            } if (form2.value == 'b') {
+                document.getElementById('resultado2').innerHTML = "endomorfo";
+            } if (form2.value == 'c') {
+                document.getElementById('resultado2').innerHTML = "mesomorfo";
+            }
+        }
+        function confirmar3() {
+            form3 = document.forms['form3'].elements['questao'];
+            if (form3.value == 'a') {
+                document.getElementById('resultado3').innerHTML = "ectomorfo";
+            } if (form3.value == 'b') {
+                document.getElementById('resultado3').innerHTML = "endomorfo";
+            } if (form3.value == 'c') {
+                document.getElementById('resultado3').innerHTML = "mesomorfo";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

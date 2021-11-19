@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecione o Biotipo</title>
+</head>
+<style>
+    #nome {
+        font-size: 65px;
+        color: rgba(2, 15, 19, 0.767);
+        text-decoration: underline rgb(0, 0, 0);
+        text-align: center;
+    }
+
+    #biotipo {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: underline black;
+        color: black;
+        font-size: 40px;
+        margin-top: 100px;
+    }
+
+    #tudo {
+        background-color: rgb(0, 128, 128);
+    }
+
+    .div1 {
+        color: white;
+        text-decoration: none;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        overflow: hidden;
+        transition: all .5s;
+    }
+
+    nav {
+        background-color: black;
+        padding: 0 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1,
+    p {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    nav,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    li {
+        padding: 0 20px;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 10px;
+    }
+
+    #butao {
+        background-color: transparent;
+        border: none;
+        color: #FFF;
+        font-size: 36px;
+        position: absolute;
+        right: 10px;
+        display: none;
+    }
+
+    li:hover,
+    h1:hover,
+    #butao:hover {
+        cursor: pointer;
+        background-color: rgba(0, 255, 255, 0.534);
+        transition-duration: 600ms;
+        border-radius: 10px;
+    }
+
+    #butao:focus~ul {
+        height: 170px;
+    }
+
+    @media screen and (max-width: 1340px) {
+
+        nav,
+        ul {
+            flex-direction: column;
+        }
+
+        ul {
+            text-align: center;
+            margin: 0;
+            height: 0;
+        }
+
+        nav {
+            padding: 0;
+            align-items: flex-start;
+        }
+
+        h1 {
+            margin: 10px;
+        }
+
+        #butao {
+            display: flex;
+        }
+
+        li,
+        ul {
+            width: 100%;
+        }
+
+
+    }
+
+    @media screen and (max-width: 940px) {
+
+     
+
+       button#botaozada {
+           height: 25px;
+           width: 90px;
+           font-size: 12px;
+           margin: 0 30px 30px 10px;
+       }
+      
+
+     img.fotos{
+       
+        margin: 0px 30px 0px 15px;
+        height: 130px;
+        }
+        
+        
+#biotipo{
+    font-size: 25px;
+}
+        
+    }
+    @media screen and (max-width: 420px){
+        
+        button#botaozada {
+           height: 23px;
+           width: 70px;
+           font-size: 10px;
+           margin: 0 15px 15px 5px;
+       }
+      
+
+     img.fotos{
+       
+        margin: 0px 13px 0px 10px;
+        height: 100px;
+        }
+        
+        
+        
+#biotipo{
+    font-size: 25px;
+}
+
+footer.footer{
+    font-size: 15px;
+}
+
+
+    }
+        
+
+    .foto {
+        height: 30px;
+    }
+
+    #botaozada {
+        background-color: black;
+        line-height: 20px;
+        border-radius: 5px;
+        font-size: 20px;
+        height: 30px;
+        width: 150px;
+        align-items: center;
+        margin: 0 80px;
+    }
+
+    #botaozada:hover {
+        background-color: rgb(0, 128, 128);
+        transition-duration: 600ms;
+
+    }
+
+    .biotipo34 {
+        text-decoration: none;
+        color: white;
+    }
+
+    .biotipos {
+
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        background-color: black;
+        color: #FFF;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 20px;
+
+    }
+
+    #teste {
+        text-decoration: none;
+        color: white;
+        margin: auto;
+    }
+
+    img {
+        display: inline;
+        margin: 0px 70px 10px 70px;
+    }
+</style>
+
+<body id="tudo">
+
+    <div>
+        <nav>
+            <div class="logo">
+                <h1> <a id="teste" href="Inicio.html"> Strong Trainer </a> </h1>
+            </div>
+            <button id="butao">&#9776;</button>
+            <ul>
+                <li>
+                    <p> <a class="div1" href="meubiotipo.html">Como saber meu biotipo?</a></p>
+                </li>
+                <li>
+                    <p><a class="div1" href="sobre_nos.html"> Sobre nós </a> </p>
+                </li>
+                <li>
+                    <p> <a class="div1" href="Inicio.html"> Sair </a> </p>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+    <p id="biotipo">Selecione o seu biotipo </p>
+    <div class="biotipos">
+
+        <button id="botaozada"> <a class="biotipo34" href="obj_ecto.html"> Ectomorfo </a> </button>
+
+
+
+        <button id="botaozada"><a class="biotipo34" href="obj_meso.html"> Mesomorfo</a> </button>
+
+
+
+        <button id="botaozada"> <a class="biotipo34" href="obj_endo.html"> Endomorfo</a></button>
+
+    </div>
+    <center>
+        <div class="fotosbiotipos">
+            <img class="fotos" src="ECTOMORFO.png">
+
+            <img class="fotos" src="MESOMORFO.png">
+
+            <img class="fotos" src="ENDOMORFO.png">
+        </div>
+    </center>
+    <footer class="footer">
+        Joao Vitor Gottardo e Gustavo Lopes dos Santos
+    </footer>
+</body>
+
+</html>
